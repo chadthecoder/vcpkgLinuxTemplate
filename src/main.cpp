@@ -12,6 +12,15 @@ int main()
     }
     else std::cout << "Good job!\n";
 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    //glsl_version currently only used for imgui code
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE); //make so window is not resizable
+    //glfwWindowHint(GLFW_SAMPLES, 4);
+
+    const char* glsl_version = "#version 330"; //if 3.3, then 330 and same for newer versions
+
     GLFWwindow* window = glfwCreateWindow(800, 600, "Template", NULL, NULL);
     if (window == NULL)
     {
@@ -20,7 +29,7 @@ int main()
         return -1;
     }
 
-glfwMakeContextCurrent( window );
+    glfwMakeContextCurrent( window );
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cout << "Failed to initialize GLAD" << std::endl;
@@ -28,6 +37,13 @@ glfwMakeContextCurrent( window );
     }
     else std::cout << "Glad is working\n";
 
+    while (!glfwWindowShouldClose(window))
+    {
+        /* code */
+    }
+    
+
+    glfwDestroyWindow(window);
     glfwTerminate();
     return 0;
 }

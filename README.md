@@ -1,12 +1,9 @@
 git clone --recurse-submodules git@github.com:chadthecoder/vcpkgLinuxTemplate.git
 
 chmod u+x build.sh
+chmod u+x run.sh
 
-rm -rf build
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=lib/vcpkg/scripts/buildsystems/vcpkg.cmake 
-cd build
-make
-./HelloWorld
+run build.sh and then run.sh
 
 vcpkg install doesnt work?
 
