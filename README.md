@@ -1,3 +1,5 @@
+git clone --recurse-submodules git@github.com:chadthecoder/vcpkgLinuxTemplate.git
+
 chmod u+x build.sh
 
 rm -rf build
