@@ -10,4 +10,6 @@ vcpkg install doesnt work?
 
 add .sh file that takes in arguement and builds everything
 
-./lib/vcpkg/vcpkg add port [dep name]
+# ./lib/vcpkg/vcpkg to use vcpkg
+Example:
+    ./lib/vcpkg/vcpkg add port [dep name]
