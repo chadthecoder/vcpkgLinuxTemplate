@@ -24,13 +24,19 @@ int main()
 
     const char* glsl_version = "#version 330"; //if 3.3, then 330 and same for newer versions
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Template", NULL, NULL);
-    if (window == NULL)
+    /* Create a windowed mode window and its OpenGL context */
+    GLFWwindow* window;
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor(); 
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+    window = glfwCreateWindow(800, 800, "Template", NULL, NULL);
+    //window = glfwCreateWindow(mode->width, mode->height, "Template", glfwGetPrimaryMonitor(), NULL);
+    if (!window)
     {
         std::cout << "Failed to create GLFW window\n";
         glfwTerminate();
         return -1;
     }
+    else fmt::print("Your GLFW Window is initialized\n");
 
     glfwMakeContextCurrent( window );
 
@@ -40,9 +46,15 @@ int main()
     }
     else std::cout << "Glad is working\n";
 
+    glViewport(0, 0, 800, 800);
+
+    glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glfwSwapBuffers(window);
+
     while (!glfwWindowShouldClose(window))
     {
-        /* code */
+        glfwPollEvents();
     }
     
 
