@@ -5,6 +5,8 @@ chmod u+x run.sh
 
 run build.sh and then run.sh
 
+sudo ./lib/vcpkg/vcpkg install
+
 vcpkg install doesnt work?
 
 add .sh file that takes in arguement and builds everything

@@ -1,26 +1,53 @@
 Detecting compiler hash for triplet x64-linux...
 The following packages will be built and installed:
   * egl-registry:x64-linux -> 2022-09-20
+    fmt:x64-linux -> 10.1.1
     glad[core,loader]:x64-linux -> 0.1.36
     glfw3:x64-linux -> 3.3.8#3
   * opengl-registry:x64-linux -> 2022-09-29#1
   * vcpkg-cmake:x64-linux -> 2023-05-04
   * vcpkg-cmake-config:x64-linux -> 2022-02-06#1
 Additional packages (*) will be modified to complete this operation.
-Restored 6 package(s) from /home/chadthecoder/.cache/vcpkg/archives in 38.1 ms. Use --debug to see more details.
-Installing 1/6 vcpkg-cmake-config:x64-linux...
-Elapsed time to handle vcpkg-cmake-config:x64-linux: 430 us
-Installing 2/6 vcpkg-cmake:x64-linux...
-Elapsed time to handle vcpkg-cmake:x64-linux: 315 us
-Installing 3/6 egl-registry:x64-linux...
-Elapsed time to handle egl-registry:x64-linux: 448 us
-Installing 4/6 opengl-registry:x64-linux...
-Elapsed time to handle opengl-registry:x64-linux: 940 us
-Installing 5/6 glad:x64-linux...
-Elapsed time to handle glad:x64-linux: 625 us
-Installing 6/6 glfw3:x64-linux...
-Elapsed time to handle glfw3:x64-linux: 616 us
-Total install time: 3.41 ms
+Restored 6 package(s) from /home/chadthecoder/.cache/vcpkg/archives in 33.2 ms. Use --debug to see more details.
+Installing 1/7 vcpkg-cmake-config:x64-linux...
+Elapsed time to handle vcpkg-cmake-config:x64-linux: 428 us
+Installing 2/7 vcpkg-cmake:x64-linux...
+Elapsed time to handle vcpkg-cmake:x64-linux: 342 us
+Installing 3/7 fmt:x64-linux...
+Building fmt:x64-linux...
+-- Downloading https://github.com/fmtlib/fmt/archive/10.1.1.tar.gz -> fmtlib-fmt-10.1.1.tar.gz...
+-- Extracting source /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/downloads/fmtlib-fmt-10.1.1.tar.gz
+-- Applying patch fix-write-batch.patch
+-- Applying patch fix-format-conflict.patch
+-- Using source at /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/buildtrees/fmt/src/10.1.1-281bbdd8af.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/packages/fmt_x64-linux/lib/pkgconfig/fmt.pc
+-- Fixing pkgconfig file: /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/packages/fmt_x64-linux/debug/lib/pkgconfig/fmt.pc
+-- Installing: /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/packages/fmt_x64-linux/share/fmt/usage
+-- Installing: /home/chadthecoder/Code/vcpkgLinuxTemplate/lib/vcpkg/packages/fmt_x64-linux/share/fmt/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 95.3 ms.
+Elapsed time to handle fmt:x64-linux: 7.2 s
+Installing 4/7 egl-registry:x64-linux...
+Elapsed time to handle egl-registry:x64-linux: 434 us
+Installing 5/7 opengl-registry:x64-linux...
+Elapsed time to handle opengl-registry:x64-linux: 753 us
+Installing 6/7 glad:x64-linux...
+Elapsed time to handle glad:x64-linux: 530 us
+Installing 7/7 glfw3:x64-linux...
+Elapsed time to handle glfw3:x64-linux: 514 us
+Total install time: 7.2 s
+The package fmt provides CMake targets:
+
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt)
+
+    # Or use the header-only version
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt-header-only)
+
 glad provides CMake targets:
 
   # this is heuristically generated, and may not be correct

@@ -283,6 +283,9 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/chadthecoder/Code/vcpkgLinuxTemplate/build/vcpkg_installed
 
+//The directory containing a CMake configuration file for fmt.
+fmt_DIR:PATH=/home/chadthecoder/Code/vcpkgLinuxTemplate/build/vcpkg_installed/x64-linux/share/fmt
+
 //The directory containing a CMake configuration file for glad.
 glad_DIR:PATH=/home/chadthecoder/Code/vcpkgLinuxTemplate/build/vcpkg_installed/x64-linux/share/glad
 

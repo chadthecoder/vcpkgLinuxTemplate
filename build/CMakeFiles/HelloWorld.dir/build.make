@@ -81,6 +81,7 @@ HelloWorld: CMakeFiles/HelloWorld.dir/src/main.cpp.o
 HelloWorld: CMakeFiles/HelloWorld.dir/build.make
 HelloWorld: vcpkg_installed/x64-linux/debug/lib/libglfw3.a
 HelloWorld: vcpkg_installed/x64-linux/debug/lib/libglad.a
+HelloWorld: vcpkg_installed/x64-linux/debug/lib/libfmtd.a
 HelloWorld: /usr/lib/x86_64-linux-gnu/librt.so
 HelloWorld: /usr/lib/x86_64-linux-gnu/libm.so
 HelloWorld: /usr/lib/x86_64-linux-gnu/libX11.so

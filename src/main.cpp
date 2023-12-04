@@ -2,6 +2,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <fmt/core.h>
+
 #include <iostream>
 
 int main()
@@ -10,7 +12,8 @@ int main()
     {
         std::cout << "Bad job!\n";
     }
-    else std::cout << "Good job!\n";
+    else fmt::print("Good job!\n");
+    //else std::cout << "Good job!\n";
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

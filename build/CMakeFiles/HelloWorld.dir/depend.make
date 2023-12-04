@@ -16,5 +16,8 @@ CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/GLES
 CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/GLES3/gl3platform.h
 CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/GLFW/glfw3.h
 CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/KHR/khrplatform.h
+CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/fmt/core.h
+CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/fmt/format-inl.h
+CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/fmt/format.h
 CMakeFiles/HelloWorld.dir/src/main.cpp.o: vcpkg_installed/x64-linux/include/glad/glad.h
 
